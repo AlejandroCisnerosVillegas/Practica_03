@@ -1,3 +1,3 @@
-# Practica 03 
-## _Quiz de Matemáticas con Respuestas Opcionales en HTML, CSS y PHP_
-Este proyecto que crea fácilmente un quiz matemático dinámico, soporta más de 20 preguntas que se mostraran de forma aleatoria, puede multiplicar, dividir, sumar, restar, etc. Solo se necesita agregar la operación a realizar, la respuesta correcta y 2 respuestas erróneas. Cada respuesta correcta sumará un punto y al final te mostrará la cantidad de preguntas contestadas correctamente.
+# Sistema Interactivo de Evaluación Matemática
+## _Área: Prácticas_
+Esta práctica se enfoca en la creación de un sistema de cuestionario interactivo de matemáticas. Utilizando PHP para la lógica del servidor y la gestión de sesiones, HTML para la estructura de la página, y CSS para el diseño y estilo visual, se ha desarrollado una aplicación web que ofrece una experiencia de usuario atractiva y educativa.
