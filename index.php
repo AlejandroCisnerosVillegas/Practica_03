@@ -1,59 +1,36 @@
 <?php include('quiz.php'); ?>
-
-<html>
-<head>
-<meta charset="UTF-8">
-<link rel="shortcut icon" href="../../assets/img/Favicon-img.png">
-		<title>Practica 03</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div id="cajaquiz" align="center">
-        <?php
-
-          if ($mostrar_puntos == false) 
-		  {
-             ?>
-			 <h1><p class="quiztitulo">Quiz de matemáticas</p></h1>
-        <h1>
-		<p class="quiz">¿Cuánto es 	
-		<?php echo $pregunta['num_izquierda'].' '.$pregunta['signo_opc'].' '.$pregunta['num_derecha']; ?>?
-		</p></h1>
-		<h1>
-				<p>Pregunta <?php echo count($_SESSION['preguntas_index']); ?> de 
-							<?php echo $totpreguntas; ?>
-		</p></h1>
-				
-        <form action="index.php" method="POST">
-            <input type="hidden" name="index" value="<?php echo $index ?>" />
-			<br>
-            <input type="submit" class="botonesvai" name="respuesta" value="<?php echo $respuestas[0]; ?>" />
-            <input type="submit" class="botonesvai" name="respuesta" value="<?php echo $respuestas[1]; ?>" />
-            <input type="submit" class="botonesvai" name="respuesta" value="<?php echo $respuestas[2]; ?>" />
-        </form>
-	
-        <?php 
-			echo "<p class='vai1respuesta'>$preparando_respuesta</p>";
-			} ?>
-			<img src="../../assets/img/Favicon-Big-img.png" >
-        <?php
-
-          if ($mostrar_puntos) {
-
-            echo "<h2>Respuestas correctas: " . $_SESSION['totcorrectas']
-        . " de " . $totpreguntas . " preguntas</h2>"; ?>
-
-        <form action="index.php" method="POST">
-
-            <input type="submit" class="botonesvai" value="Intentar de nuevo" />
-
-        </form>
-
-        <?php 
-			
-			
-			} ?>
-    </div>
-</body>
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Sistema Interactivo de Evaluación Matemática</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="../../assets/img/logo.png" rel="icon">
+        <link href="../../assets/img/logo-grande.png" rel="apple-touch-icon">
+    </head>
+    <body>
+        <div class="container">
+            <?php if ($mostrar_puntos == false): ?>
+                <h1 class="quiz-title">Quiz de Matemáticas</h1>
+                <h2 class="quiz-question">¿Cuánto es <?php echo $pregunta['num_izquierda'].' '.$pregunta['signo_opc'].' '.$pregunta['num_derecha']; ?>?</h2>
+                <p class="quiz-progress">Pregunta <?php echo count($_SESSION['preguntas_index']); ?> de <?php echo $totpreguntas; ?></p>
+                <form action="index.php" method="POST" class="quiz-form">
+                    <input type="hidden" name="index" value="<?php echo $index ?>" />
+                    <div class="quiz-buttons">
+                        <button class="quiz-button" name="respuesta" value="<?php echo $respuestas[0]; ?>"><?php echo $respuestas[0]; ?></button>
+                        <button class="quiz-button" name="respuesta" value="<?php echo $respuestas[1]; ?>"><?php echo $respuestas[1]; ?></button>
+                        <button class="quiz-button" name="respuesta" value="<?php echo $respuestas[2]; ?>"><?php echo $respuestas[2]; ?></button>
+                    </div>
+                </form>
+                <p class="quiz-response"><?php echo $preparando_respuesta; ?></p>
+            <?php else: ?>
+                <h2 class="quiz-score">Respuestas correctas: <?php echo $_SESSION['totcorrectas']; ?> de <?php echo $totpreguntas; ?> preguntas</h2>
+                <form action="index.php" method="POST" class="quiz-form">
+                    <button class="quiz-button">Intentar de nuevo</button>
+                </form>
+            <?php endif; ?>
+            <img src="../../assets/img/logo-grande.png" alt="Logo" class="quiz-logo">
+        </div>
+    </body>
 </html>

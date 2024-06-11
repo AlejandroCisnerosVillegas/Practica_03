@@ -1,67 +1,64 @@
-body 
-{
-	background: linear-gradient(to bottom, #3380B5, white);
-	font-family: sans-serif;
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
 }
-
-#cajaquiz 
-{
-	margin:0;
-	top:50%;
-	left:50%;
-	position: absolute;
-	transform: translate(-50%,-50%);
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    text-align: center;
 }
-
-.quiz 
-{
-	position: relative;
-	margin: 0;
-	font-size:1.5em;
-	font-weight: bold;
+.quiz-title {
+    margin-top: 0;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
 }
-
-.quiztitulo 
-{
-	position: relative;
-	margin: 0;
-	font-size:2em;
-	font-weight: bold;
-	
+.quiz-question {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
 }
-
-.botonesvai 
-{
-  width: 12em;
-  font-size:1.2em;
-  font-weight: bold;
-  display: inline-block;
-  bottom: 120px;
-  border-radius: 4px;
-  border: 2px solid black;
-  color: #000;
-  background-color: white;
-  padding: 15px;
-  margin: 10px;
-  transition: .5s ;
-  text-decoration: none;
+.quiz-progress {
+    font-size: 18px;
+    color: #666;
 }
-.botonesvai:hover 
-{
-  background-color: #FF8300;
-  color: black;
-  -webkit-appearance: button; 
-  cursor: pointer;
+.quiz-form {
+    margin-top: 20px;
 }
-
-.botonesvai:focus 
-{
-	outline: none;
+.quiz-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
-
-.vai1respuesta
-{
-		font-size:2em;
-		color: #801700;
-		font-weight: bold;
+.quiz-button {
+    width: 150px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 2px solid #007bff;
+    color: #007bff;
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.quiz-button:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+.quiz-response {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+.quiz-logo {
+    margin-top: 20px;
+    width: 100px;
+    height: 100px;
+    background-color: #0c94ca;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
