@@ -16,7 +16,7 @@ Opción para reiniciar el cuestionario y volver a intentar responder todas las p
 
 Esta práctica demuestra la capacidad de integrar PHP, HTML y CSS para desarrollar una aplicación web interactiva que ofrece un cuestionario de matemáticas. El sistema maneja dinámicamente la generación de preguntas, la captura de respuestas y la retroalimentación al usuario, presentando una interfaz intuitiva y atractiva.
 
-**Consulta la versión preliminar de la practica aquí:** [https://practica_03.com](https://alejandrovillegas.net/projects/practice-03/index.php)
+**Consulta la versión preliminar de la practica aquí:** [https://practica_03.com](https://www.alejandrovillegas.dev/projects/practice-03/index.php)
 
 # 📌 Información de la Practica
 
@@ -28,7 +28,7 @@ Esta practica ha sido desarrollado como parte del portafolio de soluciones tecno
 
 - **Fecha de Desarrollo**: 15 de marzo de 2018
 
-- **Portafolio de Proyectos**: [www.alejandrovillegas.net](https://www.alejandrovillegas.net/)
+- **Portafolio de Proyectos**: [www.alejandrovillegas.dev](https://www.alejandrovillegas.dev)
 
 ## 🔧 Guía de Instalación y Configuración de la Practica
 
